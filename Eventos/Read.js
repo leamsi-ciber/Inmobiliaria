@@ -1,6 +1,5 @@
 const db = firebase.firestore();
 var storageRef = firebase.storage().ref();
-var storage = firebase.storage();
 
 const eventosContainer = document.getElementById("evento-container");
 
@@ -37,16 +36,15 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       <p>Fecha Fin:${evento.FechaFin}</p>
       <p>Descripcion: ${evento.Descripcion}</p>
       <div>
-          <button class="btn btn-warning btn-edit"  data-id="${evento.id} " > Editar </button>
+          <button class="btn btn-warning btn-edit"  data-id="${evento.id}" > Editar </button>
           <button class="btn btn-danger btn-delete " data-id="${evento.id}" > Borrar </button>
       </div>
       </div>`;
-    });
-
-    const btnsDelete = document.querySelectorAll(".btn-delete");
-    btnsDelete.forEach((btn) => {
-      btn.addEventListener("click", async (e) => {
-        await deleteEventos(e.target.dataset.id);
+      const btnsDelete = document.querySelectorAll(".btn-delete");
+      btnsDelete.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          await deleteEventos(e.target.dataset.id);
+        });
         const btnsEdit = document.querySelectorAll(".btn-edit");
         btnsEdit.forEach((btn) => {
           btn.addEventListener("click", async (e) => {

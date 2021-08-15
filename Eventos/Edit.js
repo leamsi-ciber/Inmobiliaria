@@ -46,7 +46,7 @@ eventoForm.addEventListener("submit", async (e) => {
     var imagensubir = imagen.files[0];
     console.log(imagensubir);
     var uploadTask = storageRef
-      .child("Eventos/" + Date.parse(dateTime) + imagensubir.name)
+      .child("Eventos/" + editar.FechaRegistro + imagensubir.name)
       .put(imagensubir);
     uploadTask.on(
       "state_changed",
@@ -85,8 +85,8 @@ eventoForm.addEventListener("submit", async (e) => {
               Descripcion: descripcion,
               Url: downloadURL,
             });
+            window.location.href = "./Eventos.html";
           });
-        window.location.href = "./Eventos.html";
       }
     );
   }

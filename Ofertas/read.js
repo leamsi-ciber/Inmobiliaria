@@ -32,11 +32,19 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                 <p>Precio Original:${oferta.PrecioOriginal}</p>
                 <p>Precio Oferta${oferta.PrecioOferta}</p>
                 <div>
-                    <button class="btn btn-warning btn-edit"  data-id="${oferta.id}" > Editar </button>
-                    <button class="btn btn-danger btn-delete " data-id="${oferta.id}" > Borrar </button>
+                    <button class="btn btn-warning btn-edit regis-ul"  data-id="${oferta.id}" > Editar </button>
+                    <button class="btn btn-danger btn-delete regis-ul" data-id="${oferta.id}" > Borrar </button>
                 </div>
                 </div>`;
-
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          console.log("signin");
+          loginCheck(user);
+        } else {
+          console.log("signout");
+          loginCheck(user);
+        }
+      });
       const btnsDelete = document.querySelectorAll(".btn-delete");
       btnsDelete.forEach((btn) => {
         btn.addEventListener("click", async (e) => {

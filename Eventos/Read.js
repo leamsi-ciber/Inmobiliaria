@@ -35,11 +35,20 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       <p>Fecha Inicio: ${evento.FechaInicio}</p>
       <p>Fecha Fin:${evento.FechaFin}</p>
       <p>Descripcion: ${evento.Descripcion}</p>
-      <div>
+      <div class="regis-ul">
           <button class="btn btn-warning btn-edit"  data-id="${evento.id}" > Editar </button>
           <button class="btn btn-danger btn-delete " data-id="${evento.id}" > Borrar </button>
       </div>
       </div>`;
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          console.log("signin");
+          loginCheck(user);
+        } else {
+          console.log("signout");
+          loginCheck(user);
+        }
+      });
       const btnsDelete = document.querySelectorAll(".btn-delete");
       btnsDelete.forEach((btn) => {
         btn.addEventListener("click", async (e) => {

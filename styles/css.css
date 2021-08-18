@@ -5,7 +5,7 @@
 }
 
 .container-fullwidth{
-  background-image: url('../imagenes/banner.jpg'); background-repeat: no-repeat;
+  background-image: url('../imagenes/banner.webp'); background-repeat: no-repeat;
                 background-position: center center;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;

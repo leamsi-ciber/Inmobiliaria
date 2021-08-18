@@ -44,6 +44,15 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         <a class="btn btn-danger btn-delete " data-id="${evento.id}" >Delete</a>
       </div>
     </div>`;
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          console.log("signin");
+          loginCheck(user);
+        } else {
+          console.log("signout");
+          loginCheck(user);
+        }
+      });
       const btnsDelete = document.querySelectorAll(".btn-delete");
       btnsDelete.forEach((btn) => {
         btn.addEventListener("click", async (e) => {

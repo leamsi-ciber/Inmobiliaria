@@ -14,13 +14,86 @@
     </head>
     
 <body>
-    <div class="container">
-        <div class="row"> 
-            <div class="col-nd-6" id="evento-container">
-                
+    <div class="bg-dark">
+        <div class="container ">
+            <nav class="navbar navbar-expand-md navbar-dark ">
+                <a href="index.html" class="navbar-brand"> Inmobiliarias Carbajal</a>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                          Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Ofertas.html">
+                          Ofertas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Ferias.html">
+                          Ferias
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="Eventos.html">
+                          Eventos
+                        </a>
+                    </li>
+                </ul>
+                <div class="login-ul">
+                <ul  class="navbar-nav ms-auto login-ul">
+                    <li class="nav-item">
+                        <a class="btn btn-secondary" href="Login.html">
+                          Login
+                        </a>
+                    </li>
+                </ul>
+                </div >
+                <div class="regis-ul">
+                    <ul  class="navbar-nav ms-auto ">
+                        <li class="nav-item">
+                            <a class="btn btn-info me-1" href="Registro.html">
+                              Registrar   
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                                <button  class="btn btn-secondary  logout" href="#">
+                                  Salir
+                                </button>
+                        </li>
+                    </ul>
+                    </div>
+            </nav>
         </div>
     </div>
+    <div class="container">
+        <div class="row"> 
+            <div class="col-3 ">
+                <h2 class="m-2">Eventos </h2>
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="col-3 m-2 ">
+                <a  href="EventosAgregar.html" class="btn btn-success agregar regis-ul"> Agregar</a>
+            </div>
+        </div>
+        <div class="row"> 
+            <div class="col-lg-6" id="evento-container">
+                
+        </div>
+       
     </div>
+    </div>
+    <footer>
+        <div class="text-center bg-dark bg-gradient text-white p-4">
+            <address>
+                Calle Maria Trinidad Sanches Nº 28
+            </address>
+            <p>Grupo 1 Ingenieria de Software</p>
+            <p>&copy; 2021 Todos los derechos reservados</p>
+        </div>
+
+    </footer>
 </body>
  <!-- The core Firebase JS SDK is always required and must be listed first -->
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
@@ -31,6 +104,8 @@
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+
 
 
  <script>
@@ -52,4 +127,5 @@
  <script src="Eventos/Read.js"></script>
 
 
+ <script src="Login/auth.js"></script>
 </html>

@@ -8,6 +8,7 @@ const getFeria = (id) => db.collection("Ferias").doc(id).get();
 
 const ongetFerias = (callback) =>
   db.collection("Ferias").orderBy("FechaRegistro", "desc").onSnapshot(callback);
+
 const deleteFeria = (id) => db.collection("Ferias").doc(id).delete();
 
 window.addEventListener("DOMContentLoaded", async (e) => {
@@ -18,21 +19,29 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       feria = doc.data();
       feria.id = doc.id;
       /* Aqui es donde se deberia dar cualquier diseño a los datos que se leen*/
-      feriasContainer.innerHTML += `<div class="card card-body mt-2">
+      feriasContainer.innerHTML += `<div class="card card-body m-2 border-secondary">
                 <img src=${feria.Url}>
                 <h3>Titulo: ${feria.Titulo}</h3>
                 <p>Direccion: ${feria.Direccion}</p>
                 <p>Sector: ${feria.Sector}</p>
                 <p>Provincia: ${feria.Provincia}</p>
-                <p>Fecha Inicio:${feria.FechaInicio}</p>
-                <p>Fecha Fin:${feria.FechaFin}</p>
+                <p>Fecha Inicio: ${feria.FechaInicio}</p>
+                <p>Fecha Fin: ${feria.FechaFin}</p>
                 <p>Descripcion: ${feria.Descripcion}</p>
-                <div>
-                    <button class="btn btn-warning btn-edit"  data-id="${feria.id}" > Editar </button>
-                    <button class="btn btn-danger btn-delete " data-id="${feria.id}" > Borrar </button>
+                <div class="regis-ul">
+                    <button class="btn btn-warning btn-edit regis-ul"  data-id="${feria.id}" > Editar </button>
+                    <button class="btn btn-danger btn-delete  regis-ul" data-id="${feria.id}" > Borrar </button>
                 </div>
                 </div>`;
-
+      auth.onAuthStateChanged((user) => {
+        if (user) {
+          console.log("signin");
+          loginCheck(user);
+        } else {
+          console.log("signout");
+          loginCheck(user);
+        }
+      });
       const btnsDelete = document.querySelectorAll(".btn-delete");
       btnsDelete.forEach((btn) => {
         btn.addEventListener("click", async (e) => {

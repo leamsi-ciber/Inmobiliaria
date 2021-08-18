@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <head>
         <meta charset="UTF-8">
@@ -12,96 +13,100 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head><title>Agregar evento</title>
-</head>
-<body>
-    <div class="container">
-  <div class="login-root">
-    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
-      <div class="loginbackground box-background--white padding-top--64">
-        <div class="loginbackground-gridContainer">
-          <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
-            <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
-            </div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
-            <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
-            <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
-            <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
-            <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
-            <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
-            <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
-            <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
-          </div>
-          <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
-            <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
-          </div>
+  
+    <div class="bg-dark">
+        <div class="container ">
+            <nav class="navbar navbar-expand-md navbar-dark ">
+                <a href="index.html" class="navbar-brand"> Inmobiliarias Carbajal</a>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" >
+                          Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Ofertas.html">
+                          Ofertas
+                        </a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" href="Ferias.html">
+                          Ferias
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Eventos.html">
+                          Eventos
+                        </a>
+                    </li>
+                </ul>
+                <div class="login-ul">
+                <ul  class="navbar-nav ms-auto   login-ul">
+                    <li class="nav-item">
+                        <a class="btn btn-secondary" href="Login.html">
+                          Login
+                        </a>
+                    </li>
+                </ul>
+                </div >
+                <div class="regis-ul">
+                    <ul  class="navbar-nav ms-auto ">
+                        <li class="nav-item">
+                            <a class="btn btn-info me-1" href="Registro.html">
+                              Registrar   
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                                <button  class="btn btn-secondary  logout" href="#">
+                                  Salir
+                                </button>
+                        </li>
+                    </ul>
+                    </div>
+            </nav>
         </div>
-      </div>
-      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
-        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <h1>Inmobiliarias Carbajal</h1>
-        </div>
+    </div>
     <div class="container">
-        <h2>Agregar Evento</h2>
-        <form class="row g-3">
-            <div class="col-md-6">
-              <label for="Titulo" class="form-label">Titulo</label>
-              <input type="text" id="evento-title" class="form-control" placeholder="Titulo" required>
-            </div>
-            <div class="col-md-6">
-              <label for="Tipo" class="form-label">Tipo</label>
-              <input type="text"  id="evento-tipo" class="form-control" placeholder="Tipo" required>
-            </div>
-            <div class="col-6">
-              <label for="inputAddress" class="form-label">Address</label>
-              <input type="text"  id="evento-direccion" class="form-control" placeholder="Direccion" required>
-            </div>
-            <div class="col-6">
-              <label for="inputAddress2" class="form-label">Sector</label>
-              <input type="text"  id="evento-sector" class="form-control" placeholder="Sector" required>
-            </div>
-              <div class="col-6">
-                <label for="inputAddress3" class="form-label">Provincia</label>
-                <input type="text"  id="evento-provincia" class="form-control" placeholder="Provincia" required>
-              </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">Fecha Inicio</label>
-              <input type="date"  id="evento-inicio" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">Fecha Fin</label>
-                <input type="date"  id="evento-fin" class="form-control"  required>
-              </div>
-              <div class="form-floating">
-                <textarea  id="evento-descripcion" class="form-control" placeholder="Descripcion" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Descripcion</label>
-              </div>
-              <div class="col-md-6">
-                <label for="inputCity" class="form-label">Imagen</label>
-                <input id="evento-imagen" type="file" required>
-              </div>
-            <div class="col-8">
-              <button type="submit" class="btn btn-outline-primary">Guardar</button>
-            </div>
-          </form>
+        <div class="raw">
+            <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+<form id="Evento-form" class="container">
+    <h2 class="mt-2">Agregar evento</h2>
+    <div class="form-group">
+        <label>Titulo: </label>
+    <input type="text"  id="evento-title" class="form-control" placeholder="Titulo" required>
+    </div>
+    <div class="form-group">
+        <label>Eliga un tipo:</label>
+        <select name="Tipo" id="evento-tipo"  class="form-select" required>
+            <option value="Reunion de socios">Reunion de socios</option>
+            <option value="Conferencia de apertura">Conferencia de apertura</option>
+            <option value="Seminario">Seminario</option>    
+            <option value="Cena de gala">Cena de gala</option>    
+          </select>
         </div>
     </div>
   </div>
 </div>
 
+    <button type="submit" class="btn btn-primary mt-2 regis-ul">Guardar</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+    <div class="text-center bg-dark bg-gradient text-white p-4">
+        <address>
+            Calle Maria Trinidad Sanches Nº 28
+        </address>
+        <p>Grupo 1 Ingenieria de Software</p>
+        <p>&copy; 2021 Todos los derechos reservados</p>
+    </div>
 
+</footer>
 </body>
  <!-- The core Firebase JS SDK is always required and must be listed first -->
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
@@ -112,7 +117,7 @@
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
-
+ <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
 
  <script>
  // Your web app's Firebase configuration
@@ -131,4 +136,5 @@
  firebase.analytics();
  </script>
  <script src="Eventos/Add.js"></script>
+ <script src="Login/auth.js"></script>
 </html>

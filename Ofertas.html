@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Ofertas</title>
+    <title>Inmobiliaria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
 </head>
+
 <body>
-    <div class="bg-black">
+    <div class="bg-dark">
         <div class="container ">
             <nav class="navbar navbar-expand-md navbar-dark ">
-                <a href="/index.html" class="navbar-brand"> Inmobiliarias Carbajal</a>
-                <ul class="navbar-nav ml-auto">
+                <a href="index.html" class="navbar-brand"> Inmobiliarias Carbajal</a>
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">
                           Home
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Ofertas.html">
+                        <a class="nav-link" aria-disabled="true" href="Ofertas.html">
                           Ofertas
                         </a>
                     </li>
@@ -35,7 +39,7 @@
                     </li>
                 </ul>
                 <div class="login-ul">
-                <ul  class="navbar-nav me-auto login-ul">
+                <ul  class="navbar-nav ms-auto   login-ul">
                     <li class="nav-item">
                         <a class="btn btn-secondary" href="Login.html">
                           Login
@@ -43,15 +47,15 @@
                     </li>
                 </ul>
                 </div >
-                <div  style="display: none;" class="regis-ul">
-                    <ul  class="navbar-nav me-auto">
+                <div class="regis-ul">
+                    <ul  class="navbar-nav ms-auto ">
                         <li class="nav-item">
                             <a class="btn btn-info me-1" href="Registro.html">
                               Registrar   
                             </a>
                         </li>
                         <li class="nav-item">
-                                <button  class="btn btn-secondary logout" href="#">
+                                <button  class="btn btn-secondary  logout" href="#">
                                   Salir
                                 </button>
                         </li>
@@ -62,14 +66,46 @@
     </div>
     <div class="container">
         <div class="row"> 
-            <div class="col-3">
-                <a id="agregar" href="OfertasAgregar.html" class="btn btn-success agregar regis-ul"> Agregar</a>
+            <div class="col-3 ">
+                <h2 class="m-2">Ofertas</h2>
             </div>
-            <div class="col-md-6" id="ofertas-container">
-                
+        </div>
+        <div class="row-cols-2">
+            <div class="d-flex m-3">
+                <label class="m-3" >Filtrado: </label>
+                <select name="oferta-filtro" id="oferta-filtro"  class="form-select" required>
+                    <option disabled selected value="">Eliga un filtro </option>
+                    <option value="">  Sin filtro</option>
+                    <option value="Casa">Casa</option>
+                    <option value="Apartamento">Apartamento</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Solares">Solares</option>
+                    <option value="Penthouse">Penthouse</option>
+                    <option value="Locales">Locales</option>
+                  </select>
+                <button id="btn-filtro" class=" btn btn-info m-2">Filtrar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div style="display: block;" class="col-3 ">
+                <a id="agregar" href="OfertasAgregar.html" class="btn btn-success m-2 regis-ul"> Agregar</a>
+            </div>
+        </div>
+            <div class="row">
+            <div class="col-md-10 col-lg-8" id="ofertas-container">            
         </div>
     </div>
     </div>
+    <footer>
+        <div class="text-center bg-dark bg-gradient text-white p-4">
+            <address>
+                Calle Maria Trinidad Sanches Nº 28
+            </address>
+            <p>Grupo 1 Ingenieria de Software</p>
+            <p>&copy; 2021 Todos los derechos reservados</p>
+        </div>
+
+    </footer>
 </body>
  <!-- The core Firebase JS SDK is always required and must be listed first -->
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
@@ -101,5 +137,5 @@
  firebase.analytics();
  </script>
  <script src="Ofertas/read.js"></script>
- <script src="Login/auth.js"></script>
+ <script src="Login/auth.js"></script> 
 </html>

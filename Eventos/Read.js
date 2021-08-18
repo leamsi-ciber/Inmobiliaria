@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       evento.id = doc.id;
 
       /* Aqui es donde se deberia dar cualquier diseño a los datos que se leen*/
-      eventosContainer.innerHTML += `<div class="card card-body mt-2">
+      eventosContainer.innerHTML += `<div class="card card-body m-2 border-secondary">
     <img src=${evento.Url}>
     <h3>Titulo: ${evento.Titulo}</h3>
       <p>Tipo: ${evento.Tipo}</p>
@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       <p>Sector: ${evento.Sector}</p>
       <p>Provincia: ${evento.Provincia}</p>
       <p>Fecha Inicio: ${evento.FechaInicio}</p>
-      <p>Fecha Fin:${evento.FechaFin}</p>
+      <p>Fecha Fin: ${evento.FechaFin}</p>
       <p>Descripcion: ${evento.Descripcion}</p>
       <div class="regis-ul">
           <button class="btn btn-warning btn-edit"  data-id="${evento.id}" > Editar </button>

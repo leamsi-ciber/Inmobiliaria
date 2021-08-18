@@ -8,109 +8,144 @@
     <title>editar oferta</title>
 </head>
 <body>
-    <div class="bg-black">
-        <div class="container ">
-            <nav class="navbar navbar-expand-md navbar-dark ">
-                <a href="/index.html" class="navbar-brand"> Inmobiliarias Carbajal</a>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                          Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Ofertas.html">
-                          Ofertas
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Ferias.html">
-                          Ferias
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Eventos.html">
-                          Eventos
-                        </a>
-                    </li>
-                </ul>
-                <div class="login-ul">
-                <ul  class="navbar-nav me-auto login-ul">
-                    <li class="nav-item">
-                        <a class="btn btn-secondary" href="Login.html">
-                          Login
-                        </a>
-                    </li>
-                </ul>
-                </div >
-                <div  style="display: none;" class="regis-ul">
-                    <ul  class="navbar-nav me-auto">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inmobiliaria</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="css.css">
+    </head>
+    
+    <body>
+        <div class="bg-dark">
+            <div class="container ">
+                <nav class="navbar navbar-expand-md navbar-dark ">
+                    <a href="index.html" class="navbar-brand"> Inmobiliarias Carbajal</a>
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="btn btn-info me-1" href="Registro.html">
-                              Registrar   
+                            <a class="nav-link" href="index.html" >
+                              Home
                             </a>
                         </li>
                         <li class="nav-item">
-                                <button  class="btn btn-secondary logout" href="#">
-                                  Salir
-                                </button>
+                            <a class="nav-link" href="Ofertas.html">
+                              Ofertas
+                            </a>
+                        </li>
+                        <li class="nav-item" >
+                            <a class="nav-link" href="Ferias.html">
+                              Ferias
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Eventos.html">
+                              Eventos
+                            </a>
                         </li>
                     </ul>
+                    <div class="login-ul">
+                    <ul  class="navbar-nav ms-auto   login-ul">
+                        <li class="nav-item">
+                            <a class="btn btn-secondary" href="Login.html">
+                              Login
+                            </a>
+                        </li>
+                    </ul>
+                    </div >
+                    <div class="regis-ul">
+                        <ul  class="navbar-nav ms-auto ">
+                            <li class="nav-item">
+                                <a class="btn btn-info me-1" href="Registro.html">
+                                  Registrar   
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                    <button  class="btn btn-secondary  logout" href="#">
+                                      Salir
+                                    </button>
+                            </li>
+                        </ul>
+                        </div>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div class="raw">
+                <div class="col-md-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <form id="Oferta-form">
+                                <h2 class="m-2">Editar oferta</h2>
+                        <div class="form-group">
+                            <label>Titulo:</label>
+                        <input type="text"  id="oferta-title" class="form-control" placeholder="Titulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Numero de habitaciones:</label>
+                            <input type="number"  id="oferta-habitaciones" class="form-control" placeholder="Habitaciones"  required>
+                        </div>
+                        <div class="form-group">
+                            <label>Numero de baños:</label>
+                            <input type="number"  id="oferta-baños" class="form-control" placeholder="Baños" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Eliga un tipo:</label>
+                            <select name="Tipo" id="oferta-tipo" class="form-select" required>
+                                <option value="Casa">Casa</option>
+                                <option value="Apartamento">Apartamento</option>
+                                <option value="Villa">Villa</option>
+                                <option value="Solares">Solares</option>
+                                <option value="Penthouse">Penthouse</option>
+                                <option value="Locales">Locales</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Direccion:</label>
+                            <input type="text"  id="oferta-direccion" class="form-control" placeholder="Direccion" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Sector:</label>
+                            <input type="text"  id="oferta-sector" class="form-control" placeholder="Sector" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Provincia:</label>
+                            <input type="text"  id="oferta-provincia" class="form-control" placeholder="Provincia" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Precio Original:</label>
+                            <input type="number"  id="oferta-preciooriginal" class="form-control" placeholder="precio original" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Precio Oferta:</label>
+                            <input type="number"  id="oferta-preciooferta" class="form-control" placeholder="precio oferta" required>
+                        </div>
+                    <div class="form-group">
+                        <label>Imagen:</label>
+                        <input id="oferta-imagen" type="file" >
                     </div>
-            </nav>
+                    <button type="submit" class="btn btn-warning mt-2 regis-ul">Editar</button>
+                </form>
+            </div>
+        </div>
         </div>
     </div>
-<form id="Oferta-form">
-    <div class="form-group">
-        <label>Titulo:</label>
-    <input type="text"  id="oferta-title" class="form-control" placeholder="Titulo" required>
-    </div>
-    <div class="form-group">
-        <label>Numero de habitaciones:</label>
-        <input type="number"  id="oferta-habitaciones" class="form-control" placeholder="Habitaciones"  required>
-    </div>
-    <div class="form-group">
-        <label>Numero de baños:</label>
-        <input type="number"  id="oferta-baños" class="form-control" placeholder="Baños" required>
-    </div>
-    <div class="form-group">
-        <label>Eliga un tipo:</label>
-        <select name="Tipo" id="oferta-tipo" class="form-select" required>
-            <option value="Casa">Casa</option>
-            <option value="Apartamento">Apartamento</option>
-            <option value="Villa">Villa</option>
-            <option value="Solares">Solares</option>
-            <option value="Penthouse">Penthouse</option>
-            <option value="Locales">Locales</option>
-          </select>
-    </div>
-    <div class="form-group">
-        <label>Direccion:</label>
-        <input type="text"  id="oferta-direccion" class="form-control" placeholder="Direccion" required>
-    </div>
-    <div class="form-group">
-        <label>Sector:</label>
-        <input type="text"  id="oferta-sector" class="form-control" placeholder="Sector" required>
-    </div>
-    <div class="form-group">
-        <label>Provincia:</label>
-        <input type="text"  id="oferta-provincia" class="form-control" placeholder="Provincia" required>
-    </div>
-    <div class="form-group">
-        <label>Precio Original:</label>
-        <input type="number"  id="oferta-preciooriginal" class="form-control" placeholder="precio original" required>
-    </div>
-    <div class="form-group">
-        <label>Precio Oferta:</label>
-        <input type="number"  id="oferta-preciooferta" class="form-control" placeholder="precio oferta" required>
-    </div>
-    <div class="form-group">
-        <label>Imagen:</label>
-        <input id="oferta-imagen" type="file" >
-    </div>
-    <button type="submit" class="btn-primary regis-ul">Editar</button>
-    </form>
+</div>
 
+<footer>
+    <div class="text-center bg-dark bg-gradient text-white p-4">
+        <address>
+            Calle Maria Trinidad Sanches Nº 28
+        </address>
+        <p>Grupo 1 Ingenieria de Software</p>
+        <p>&copy; 2021 Todos los derechos reservados</p>
+    </div>
+
+</footer>
 </body>
  <!-- The core Firebase JS SDK is always required and must be listed first -->
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>

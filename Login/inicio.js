@@ -12,7 +12,7 @@ formContainer.addEventListener("submit", (e) => {
       document.getElementById("error-log").style.color = "green";
       document.getElementById("error-log").innerHTML = "Login correcto";
       // ...
-      window.location.href = "index.html";
+      window.history.back();
     })
     .catch((error) => {
       var errorCode = error.code;

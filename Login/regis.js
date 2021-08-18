@@ -13,14 +13,14 @@ regisContainer.addEventListener("submit", (e) => {
       user = userCredential.user;
       console.log(user);
       document.getElementById("error-reg").style.color = "green";
-      document.getElementById("error-reg").innerHTML += "Email agregado";
+      document.getElementById("error-reg").innerHTML = "Email agregado";
       // ...
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
       document.getElementById("error-reg").style.color = "red";
-      document.getElementById("error-reg").innerHTML +=
+      document.getElementById("error-reg").innerHTML =
         "Email registrado previamente";
       // ..
     });

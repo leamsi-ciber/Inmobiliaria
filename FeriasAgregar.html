@@ -8,13 +8,27 @@
     <title>Agregar feria</title>
 </head>
 <body>
-    <div class="bg-black">
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div class="bg-dark">
         <div class="container ">
             <nav class="navbar navbar-expand-md navbar-dark ">
-                <a href="/index.html" class="navbar-brand"> Inmobiliarias Carbajal</a>
-                <ul class="navbar-nav ml-auto">
+                <a href="index.html" class="navbar-brand"> Inmobiliarias Carbajal</a>
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="index.html" >
                           Home
                         </a>
                     </li>
@@ -23,7 +37,7 @@
                           Ofertas
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" >
                         <a class="nav-link" href="Ferias.html">
                           Ferias
                         </a>
@@ -35,7 +49,7 @@
                     </li>
                 </ul>
                 <div class="login-ul">
-                <ul  class="navbar-nav me-auto login-ul">
+                <ul  class="navbar-nav ms-auto   login-ul">
                     <li class="nav-item">
                         <a class="btn btn-secondary" href="Login.html">
                           Login
@@ -43,15 +57,15 @@
                     </li>
                 </ul>
                 </div >
-                <div  style="display: none;" class="regis-ul">
-                    <ul  class="navbar-nav me-auto">
+                <div class="regis-ul">
+                    <ul  class="navbar-nav ms-auto ">
                         <li class="nav-item">
                             <a class="btn btn-info me-1" href="Registro.html">
                               Registrar   
                             </a>
                         </li>
                         <li class="nav-item">
-                                <button  class="btn btn-secondary logout" href="#">
+                                <button  class="btn btn-secondary  logout" href="#">
                                   Salir
                                 </button>
                         </li>
@@ -60,7 +74,13 @@
             </nav>
         </div>
     </div>
+    <div class="container">
+        <div class="raw">
+            <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
 <form id="Feria-form">
+    <h2 class="m-2">Agregar feria</h2>
     <div class="form-group">
         <label>Titulo:</label>
     <input type="text"  id="feria-title" class="form-control" placeholder="Titulo" required>
@@ -91,11 +111,25 @@
     </div>
     <div class="form-group">
         <label>Imagen:</label>
-        <input id="feria-imagen" type="file" >
+        <input id="feria-imagen" type="file" required >
     </div>
-    <button type="submit" class="btn-primary regis-ul">Guardar</button>
+    <button type="submit" class="btn btn-primary mt-2 regis-ul">Guardar</button>
 </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+    <div class="text-center bg-dark bg-gradient text-white p-4">
+        <address>
+            Calle Maria Trinidad Sanches Nº 28
+        </address>
+        <p>Grupo 1 Ingenieria de Software</p>
+        <p>&copy; 2021 Todos los derechos reservados</p>
+    </div>
 
+</footer>
 </body>
  <!-- The core Firebase JS SDK is always required and must be listed first -->
  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>

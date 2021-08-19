@@ -25,21 +25,25 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       evento.id = doc.id;
 
       /* Aqui es donde se deberia dar cualquier diseño a los datos que se leen*/
-      eventosContainer.innerHTML += `<div class="card card-body m-2 border-secondary">
-    <img src=${evento.Url}>
-    <h3>Titulo: ${evento.Titulo}</h3>
-      <p>Tipo: ${evento.Tipo}</p>
-      <p>Direccion: ${evento.Direccion}</p>
-      <p>Sector: ${evento.Sector}</p>
-      <p>Provincia: ${evento.Provincia}</p>
-      <p>Fecha Inicio: ${evento.FechaInicio}</p>
-      <p>Fecha Fin: ${evento.FechaFin}</p>
-      <p>Descripcion: ${evento.Descripcion}</p>
-      <div class="regis-ul">
-          <button class="btn btn-warning btn-edit"  data-id="${evento.id}" > Editar </button>
-          <button class="btn btn-danger btn-delete " data-id="${evento.id}" > Borrar </button>
+      eventosContainer.innerHTML += ` <div class="card">
+      <img src=${evento.Url} class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${evento.Titulo}</h5>
+        <p class="card-text">${evento.Descripcion}</p>
       </div>
-      </div>`;
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Tipo: ${evento.Tipo}</li>
+        <li class="list-group-item">Direccion: ${evento.Direccion}</li>
+        <li class="list-group-item">Sector: ${evento.Sector}</li>
+        <li class="list-group-item">Provincia: ${evento.Provincia}</li>
+        <li class="list-group-item">Fecha Inicio: ${evento.FechaInicio}</li>
+        <li class="list-group-item">Fecha Fin:${evento.FechaFin}</li>
+      </ul>
+      <div class="card-body">
+        <a  data-id="${evento.id}"  class="btn btn-warning btn-edit regis-ul">Editar</a>
+        <a class="btn btn-danger btn-delete regis-ul" data-id="${evento.id}" >Borrar</a>
+      </div>
+    </div>`;
       auth.onAuthStateChanged((user) => {
         if (user) {
           console.log("signin");

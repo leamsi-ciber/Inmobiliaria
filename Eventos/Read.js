@@ -25,11 +25,11 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       evento.id = doc.id;
 
       /* Aqui es donde se deberia dar cualquier diseño a los datos que se leen*/
-      eventosContainer.innerHTML += ` <div class="card">
+      eventosContainer.innerHTML += ` <div class="card m-2 p-1 border-secondary">
       <img src=${evento.Url} class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${evento.Titulo}</h5>
-        <p class="card-text">${evento.Descripcion}</p>
+        <p class="card-text"> <b> Descripcion: </b> ${evento.Descripcion}</p>
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Tipo: ${evento.Tipo}</li>
@@ -37,11 +37,11 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         <li class="list-group-item">Sector: ${evento.Sector}</li>
         <li class="list-group-item">Provincia: ${evento.Provincia}</li>
         <li class="list-group-item">Fecha Inicio: ${evento.FechaInicio}</li>
-        <li class="list-group-item">Fecha Fin:${evento.FechaFin}</li>
+        <li class="list-group-item">Fecha Fin: ${evento.FechaFin}</li>
       </ul>
       <div class="card-body">
-        <a  data-id="${evento.id}"  class="btn btn-warning btn-edit regis-ul">Editar</a>
-        <a class="btn btn-danger btn-delete regis-ul" data-id="${evento.id}" >Borrar</a>
+        <button  data-id="${evento.id}"  class="btn btn-warning btn-edit regis-ul">Editar</button>
+        <button class="btn btn-danger btn-delete regis-ul" data-id="${evento.id}" >Borrar</button>
       </div>
     </div>`;
       auth.onAuthStateChanged((user) => {

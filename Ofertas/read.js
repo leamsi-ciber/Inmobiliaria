@@ -33,22 +33,28 @@ function getData() {
       oferta = doc.data();
       oferta.id = doc.id;
       /* Aqui es donde se deberia dar cualquier diseño a los datos que se leen*/
-      ofertasContainer.innerHTML += `<div class="card card-body m-2 border-secondary">
-               <img src=${oferta.Url}>
-                <h3>Titulo: ${oferta.Titulo}</h3>
-                <p>Habitaciones: ${oferta.Habitaciones}</p>
-                <p>Baños: ${oferta.Baños}</p>
-                <p>Tipo: ${oferta.Tipo}</p>
-                <p>Direccion: ${oferta.Direccion}</p>
-                <p>Sector: ${oferta.Sector}</p>
-                <p>Provincia: ${oferta.Provincia}</p>
-                <p>Precio Original: $${oferta.PrecioOriginal}</p>
-                <p>Precio Oferta: $${oferta.PrecioOferta}</p>
-                <div>
-                    <button class="btn btn-warning btn-edit regis-ul"  data-id="${oferta.id}" > Editar </button>
-                    <button class="btn btn-danger btn-delete regis-ul" data-id="${oferta.id}" > Borrar </button>
+      ofertasContainer.innerHTML += `
+                <div class="card m-2 p-1 border-secondary" >
+                <img src=${oferta.Url} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${oferta.Titulo}</h5>
                 </div>
-                </div>`;
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">Habitaciones: ${oferta.Habitaciones}</li>
+                <li class="list-group-item">Baños: ${oferta.Baños}</li>
+                  <li class="list-group-item">Tipo: ${oferta.Tipo}</li>
+                  <li class="list-group-item">Direccion: ${oferta.Direccion}</li>
+                  <li class="list-group-item">Sector: ${oferta.Sector}</li>
+                  <li class="list-group-item">Provincia: ${oferta.Provincia}</li>
+                  <li class="list-group-item">Precio Original: $${oferta.PrecioOriginal}</li>
+                  <li class="list-group-item">Precio Oferta: $${oferta.PrecioOferta}</li>
+                </ul>
+                <div class="card-body">
+                  <a  data-id="${oferta.id}"  class="btn btn-warning btn-edit regis-ul">Editar</a>
+                  <a style ="color:white" class="btn btn-danger btn-delete regis-ul" data-id="${oferta.id}" >Borrar</a>
+                </div>
+              </div>
+              `;
       auth.onAuthStateChanged((user) => {
         if (user) {
           console.log("signin");
@@ -94,22 +100,28 @@ function filtro(valor) {
       oferta = doc.data();
       oferta.id = doc.id;
       /* Aqui es donde se deberia dar cualquier diseño a los datos que se leen*/
-      ofertasContainer.innerHTML += `<div class="card card-body mt-12">
-                   <img src=${oferta.Url}>
-                    <h3>Titulo: ${oferta.Titulo}</h3>
-                    <p>Habitaciones: ${oferta.Habitaciones}</p>
-                    <p>Baños: ${oferta.Baños}</p>
-                    <p>Tipo: ${oferta.Tipo}</p>
-                    <p>Direccion: ${oferta.Direccion}</p>
-                    <p>Sector: ${oferta.Sector}</p>
-                    <p>Provincia: ${oferta.Provincia}</p>
-                    <p>Precio Original: $ ${oferta.PrecioOriginal}</p>
-                    <p>Precio Oferta: $ ${oferta.PrecioOferta}</p>
-                    <div>
-                        <button class="btn btn-warning btn-edit regis-ul"  data-id="${oferta.id}" > Editar </button>
-                        <button class="btn btn-danger btn-delete regis-ul" data-id="${oferta.id}" > Borrar </button>
-                    </div>
-                    </div>`;
+      ofertasContainer.innerHTML += `
+                <div class="card m-2 p-1 border-secondary" >
+                <img src=${oferta.Url} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${oferta.Titulo}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">Habitaciones: ${oferta.Habitaciones}</li>
+                <li class="list-group-item">Baños: ${oferta.Baños}</li>
+                  <li class="list-group-item">Tipo: ${oferta.Tipo}</li>
+                  <li class="list-group-item">Direccion: ${oferta.Direccion}</li>
+                  <li class="list-group-item">Sector: ${oferta.Sector}</li>
+                  <li class="list-group-item">Provincia: ${oferta.Provincia}</li>
+                  <li class="list-group-item">Precio Original: $${oferta.PrecioOriginal}</li>
+                  <li class="list-group-item">Precio Oferta: $${oferta.PrecioOferta}</li>
+                </ul>
+                <div class="card-body">
+                  <a  data-id="${oferta.id}"  class="btn btn-warning btn-edit regis-ul">Editar</a>
+                  <a style ="color:white" class="btn btn-danger btn-delete regis-ul" data-id="${oferta.id}" >Borrar</a>
+                </div>
+              </div>
+              `;
       auth.onAuthStateChanged((user) => {
         if (user) {
           console.log("signin");

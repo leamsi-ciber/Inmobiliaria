@@ -116,7 +116,7 @@ function filtro(valor) {
                   <li class="list-group-item">Precio Original: $${oferta.PrecioOriginal}</li>
                   <li class="list-group-item">Precio Oferta: $${oferta.PrecioOferta}</li>
                 </ul>
-                <div class="card-body">
+                <div class="card-body ">
                   <a  data-id="${oferta.id}"  class="btn btn-warning btn-edit regis-ul">Editar</a>
                   <a style ="color:white" class="btn btn-danger btn-delete regis-ul" data-id="${oferta.id}" >Borrar</a>
                 </div>
